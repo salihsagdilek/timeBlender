@@ -61,6 +61,7 @@ body {
 }
 
 .center {
+    perspective: 100px;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -74,13 +75,23 @@ body {
 }
 
 span {
+    display: inline-block;
+    width: 10vw;
     margin:0;
     padding: 0;
 }
 
 .blink {
+    width: 2vw;
     -webkit-animation: blink 2s infinite;
     -webkit-animation-timing-function: steps(2);
+}
+
+
+
+#second {
+    transform: rotateX(30deg);
+    transform-origin:0px 0px 200px ;
 }
 
 @-webkit-keyframes blink  {
