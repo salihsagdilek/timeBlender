@@ -21,3 +21,22 @@
     document.getElementById('second').innerText = s;
     setTimeout(refreshData, x*1000);
 })();
+
+
+setInterval(
+    function(){
+        document.getElementById('second').className = 'out';
+    }
+,1000);
+
+
+setTimeout(function(){
+    setInterval(
+        function(){
+            document.getElementById('second').className = 'in';
+            setTimeout(function () {
+                document.getElementById('second').className = '';
+            },250)
+        }
+        ,1000)
+},500)
