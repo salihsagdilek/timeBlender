@@ -13,6 +13,7 @@
         second  = document.getElementById('second'),
         hour    = document.getElementById('hour'),
         minute  = document.getElementById('minute');
+    document.getElementsByClassName('settings')[0].style.backgroundColor = 'rgb(' + parseInt((parseInt(m,16)*1.2) + 25) + ',' + (parseInt(h,16)) + ',' + parseInt((parseInt(s,16)*1.7) + 100).toString() + ')';
     content.style.backgroundImage = 'url(https://vanillatours.com/Content/pictures/search/full-width-' + (parseInt(d.getMinutes() / 2) == 0 ? 1 : parseInt(d.getMinutes() / 2))+ '.jpg)';
     content.style.backgroundSize = 'cover';
     content.style.backgroundPosition = 'center';
