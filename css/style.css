@@ -57,6 +57,8 @@ body {
     /*-webkit-filter: contrast(10) invert(100%);*/
     background-blend-mode: screen;
     transform: translate3d(0px,0px,0px);
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 .center {
