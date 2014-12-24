@@ -1,0 +1,41 @@
+{
+    "webexe_settings": {
+        "linux-x32": false, 
+        "download_dir": "C:\\Users\\ekin.sigic\\Desktop\\Web2ExeWin\\files\\downloads", 
+        "windows": true, 
+        "mac": false, 
+        "nw_version": "0.11.3", 
+        "force_download": false, 
+        "linux-x64": false
+    }, 
+    "name": "timeBlender", 
+    "nodejs": true, 
+    "description": "", 
+    "single-instance": true, 
+    "keywords": [], 
+    "window": {
+        "fullscreen": true, 
+        "resizable": false, 
+        "title": "timeBlender", 
+        "always-on-top": false, 
+        "frame": false, 
+        "mac_app_icon": "", 
+        "exe_icon": "", 
+        "visible": false, 
+        "as_desktop": false, 
+        "position": "", 
+        "show_in_taskbar": false, 
+        "height": 480, 
+        "width": 640, 
+        "toolbar": false, 
+        "icon": ""
+    }, 
+    "version": "0.1.0", 
+    "webkit": {
+        "page-cache": false, 
+        "java": false, 
+        "plugin": false
+    }, 
+    "main": "index.html", 
+    "node-main": ""
+}
