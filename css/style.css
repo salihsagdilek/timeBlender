@@ -54,6 +54,7 @@ body {
     transition: background 1s;
     /*-webkit-filter: contrast(10) invert(100%);*/
     background-blend-mode: screen;
+    transform: translate3d(0px,0px,0px);
 }
 
 .center {
