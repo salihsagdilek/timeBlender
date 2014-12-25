@@ -13,17 +13,14 @@
         second  = document.getElementById('second'),
         hour    = document.getElementById('hour'),
         minute  = document.getElementById('minute');
-    document.getElementsByClassName('settings')[0].style.backgroundColor = 'rgb(' + parseInt((parseInt(m,16)*1.2) + 25) + ',' + (parseInt(h,16)) + ',' + parseInt((parseInt(s,16)*1.7) + 100).toString() + ')';
-    content.style.backgroundImage = 'url(https://vanillatours.com/Content/pictures/search/full-width-' + (parseInt(d.getMinutes() / 2) == 0 ? 1 : parseInt(d.getMinutes() / 2))+ '.jpg)';
-    content.style.backgroundSize = 'cover';
-    content.style.backgroundPosition = 'center';
+
     content.style.backgroundColor = rgba;
-    content.style.backgroundBlendMode = 'screen';
     hour.innerText = h;
     minute.innerText = m;
     second.innerText = s;
     second.className = 'in';
     if(s == 0){
+        content.style.backgroundImage = 'url(http://vanillatours.com/Content/pictures/search/full-width-' + (parseInt(d.getMinutes() / 2) == 0 ? 1 : parseInt(d.getMinutes() / 2))+ '.jpg)';
         minute.className = 'in';
         if(m == 0){
             hour.className = 'in';
@@ -38,14 +35,31 @@
             }
         }
     },250);
-     setTimeout(function(){
+    setTimeout(function(){
         second.className = 'out';
-            if(s == 59){
-                minute.className = 'out';
-                if(m == 59){
-                    hour.className = 'out';
-                }
+        if(s == 59){
+            minute.className = 'out';
+            if(m == 59){
+                hour.className = 'out';
             }
+        }
     },750);
     setTimeout(refreshData, x*1000);
+
+
+    /** For node webkit screen saver **/
+
+//var gui = require('nw.gui');
+//document.addEventListener('mousedown',function(){
+//    document.getElementsByTagName(html).opacity = 0;
+//        gui.App.quit();
+//});
+//document.addEventListener('keydown',function(e){
+//    document.getElementsByTagName(html).opacity = 0;
+//        gui.App.quit();
+//},false);
+
+
 })();
+
+document.getElementById('full').style.backgroundImage = 'url(http://vanillatours.com/Content/pictures/search/full-width-' + (parseInt(new Date().getMinutes() / 2) == 0 ? 1 : parseInt(new Date().getMinutes() / 2))+ '.jpg)';
