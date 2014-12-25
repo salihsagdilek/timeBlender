@@ -12,5 +12,8 @@
     s <= 9 ? s = '0' + s : '';
 
     document.getElementsByTagName('body')[0].style.backgroundColor = '#'+h+m+s;
+    document.getElementById('hour').innerText = h;
+    document.getElementById('minute').innerText = m;
+    document.getElementById('second').innerText = s;
     setTimeout(refreshData, x*1000);
 })();
