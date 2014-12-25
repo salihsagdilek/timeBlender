@@ -8,8 +8,8 @@
         m = d.getMinutes() <= 9 ? '0' + d.getMinutes() : d.getMinutes(),
         s = d.getSeconds() <= 9 ? '0' + d.getSeconds() : d.getSeconds(),
         alpha = '.7',
-        rgba = 'rgba(' + parseInt((parseInt(m,16)*1.2) + 25) + ',' + (parseInt(h,16)) + ',' + parseInt((parseInt(s,16)*1.7) + 100).toString() + ',' + alpha + ')';
-    var content = document.getElementById('full'),
+        rgba = 'rgba(' + parseInt((parseInt(m,16)*1.2) + 25) + ',' + (parseInt(h,16)) + ',' + parseInt((parseInt(s,16)*1.7) + 100).toString() + ',' + alpha + ')',
+        content = document.getElementById('full'),
         second  = document.getElementById('second'),
         hour    = document.getElementById('hour'),
         minute  = document.getElementById('minute');
@@ -49,14 +49,3 @@
     },750);
     setTimeout(refreshData, x*1000);
 })();
-
-
-/** For node webkit screen saver **/
-
-//var gui = require('nw.gui');
-//document.addEventListener('click',function(){
-//    gui.App.quit();
-//});
-//document.addEventListener('keydown',function(e){
-//    gui.App.quit();
-//},false);
