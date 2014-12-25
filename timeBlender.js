@@ -13,7 +13,13 @@
         second  = document.getElementById('second'),
         hour    = document.getElementById('hour'),
         minute  = document.getElementById('minute');
+<<<<<<< HEAD
 
+=======
+    content.style.backgroundImage = 'url(https://vanillatours.com/Content/pictures/search/full-width-' + (parseInt(d.getMinutes() / 2) == 0 ? 1 : parseInt(d.getMinutes() / 2))+ '.jpg)';
+    content.style.backgroundSize = 'cover';
+    content.style.backgroundPosition = 'center';
+>>>>>>> origin/master
     content.style.backgroundColor = rgba;
     hour.innerText = h;
     minute.innerText = m;
@@ -45,6 +51,7 @@
         }
     },750);
     setTimeout(refreshData, x*1000);
+<<<<<<< HEAD
 
 
     /** For node webkit screen saver **/
@@ -63,3 +70,16 @@
 })();
 
 document.getElementById('full').style.backgroundImage = 'url(http://vanillatours.com/Content/pictures/search/full-width-' + (parseInt(new Date().getMinutes() / 2) == 0 ? 1 : parseInt(new Date().getMinutes() / 2))+ '.jpg)';
+=======
+//
+///** For node webkit screen saver **/
+//
+//var gui = require('nw.gui');
+//document.addEventListener('click',function(){
+//    gui.App.quit();
+//});
+//document.addEventListener('keydown',function(e){
+//    gui.App.quit();
+//},false);
+})();
+>>>>>>> origin/master
