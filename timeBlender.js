@@ -9,34 +9,42 @@
         s = d.getSeconds() <= 9 ? '0' + d.getSeconds() : d.getSeconds(),
         alpha = '.7',
         rgba = 'rgba(' + parseInt((parseInt(m,16)*1.2) + 25) + ',' + (parseInt(h,16)) + ',' + parseInt((parseInt(s,16)*1.7) + 100).toString() + ',' + alpha + ')';
-
-    var content = document.getElementById('full');
+    var content = document.getElementById('full'),
+        second  = document.getElementById('second'),
+        hour    = document.getElementById('hour'),
+        minute  = document.getElementById('minute');
     content.style.backgroundImage = 'url(https://vanillatours.com/Content/pictures/search/full-width-' + (parseInt(d.getMinutes() / 2) == 0 ? 1 : parseInt(d.getMinutes() / 2))+ '.jpg)';
     content.style.backgroundSize = 'cover';
     content.style.backgroundPosition = 'center';
     content.style.backgroundColor = rgba;
     content.style.backgroundBlendMode = 'screen';
-    document.getElementById('hour').innerText = h;
-    document.getElementById('minute').innerText = m;
-    document.getElementById('second').innerText = s;
+    hour.innerText = h;
+    minute.innerText = m;
+    second.innerText = s;
+    second.className = 'in';
+    if(s == 0){
+        minute.className = 'in';
+        if(m == 0){
+            hour.className = 'in';
+        }
+    }
+    setTimeout(function(){
+        second.className = '';
+        if(s == 0){
+            minute.className = '';
+            if(m == 0){
+                hour.className = '';
+            }
+        }
+    },250);
+     setTimeout(function(){
+        second.className = 'out';
+            if(s == 59){
+                minute.className = 'out';
+                if(m == 59){
+                    hour.className = 'out';
+                }
+            }
+    },750);
     setTimeout(refreshData, x*1000);
 })();
-
-
-setInterval(
-    function(){
-        document.getElementById('second').className = 'out';
-    }
-,1000);
-
-
-setTimeout(function(){
-    setInterval(
-        function(){
-            document.getElementById('second').className = 'in';
-            setTimeout(function () {
-                document.getElementById('second').className = '';
-            },250)
-        }
-        ,1000)
-},500)
