@@ -45,10 +45,7 @@
             }
     },750);
     setTimeout(refreshData, x*1000);
-
-
 /** For node webkit screen saver **/
-
 //var gui = require('nw.gui');
 //document.addEventListener('mousedown',function(){
 //    document.getElementsByTagName(html).opacity = 0;
@@ -58,8 +55,5 @@
 //    document.getElementsByTagName(html).opacity = 0;
 //        gui.App.quit();
 //},false);
-
-
 })();
-
 document.getElementById('full').style.backgroundImage = 'url(http://vanillatours.com/Content/pictures/search/full-width-' + (parseInt(new Date().getMinutes() / 2) == 0 ? 1 : parseInt(new Date().getMinutes() / 2))+ '.jpg)';
