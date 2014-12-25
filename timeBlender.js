@@ -49,3 +49,14 @@
     },750);
     setTimeout(refreshData, x*1000);
 })();
+
+
+/** For node webkit screen saver **/
+
+//var gui = require('nw.gui');
+//document.addEventListener('click',function(){
+//    gui.App.quit();
+//});
+//document.addEventListener('keydown',function(e){
+//    gui.App.quit();
+//},false);
